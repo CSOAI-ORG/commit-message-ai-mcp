@@ -1,0 +1,10 @@
+name: commit-message-ai-mcp
+description: "MEOK AI Labs — commit-message-ai-mcp — Generate semantic commit messages."
+vendor: MEOK AI Labs
+homepage: https://meok.ai
+repository: https://github.com/CSOAI-ORG/commit-message-ai-mcp
+license: MIT
+categories: [Developer Tools, Git]
+tags: [git-commit, commit-message, conventional-commits, git-workflow]
+runtime: python
+entrypoint: server.py
