@@ -1,20 +1,70 @@
 {
   "name": "commit-message-ai-mcp",
-  "description": "MEOK AI Labs \u2014 commit-message-ai-mcp \u2014 Generate semantic commit messages.",
-  "vendor": "MEOK AI Labs",
-  "homepage": "https://meok.ai",
-  "repository": "https://github.com/CSOAI-ORG/commit-message-ai-mcp",
-  "runtime": "python",
-  "entrypoint": "server.py",
+  "description": "commit-message-ai-mcp \u2014 Generate semantic commit messages.",
+  "version": "1.0.0",
   "tools": [
-    "run"
-  ],
-  "categories": [
-    "Developer Tools",
-    "Git"
-  ],
-  "pricing": {
-    "free": "50 calls/day",
-    "pro": "$9/mo"
-  }
+    {
+      "name": "generate_commit",
+      "description": "Generate conventional commit message (feat/fix/refactor/docs/test/chore).",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "changes_description": {
+            "type": "string"
+          },
+          "type": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "changes_description"
+        ]
+      }
+    },
+    {
+      "name": "parse_diff",
+      "description": "Parse a git diff and summarize the changes.",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "diff_text": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "diff_text"
+        ]
+      }
+    },
+    {
+      "name": "suggest_type",
+      "description": "Suggest commit type based on change description.",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "description": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "description"
+        ]
+      }
+    },
+    {
+      "name": "format_changelog",
+      "description": "Format a list of commits into a changelog entry.",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "commits": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "commits"
+        ]
+      }
+    }
+  ]
 }

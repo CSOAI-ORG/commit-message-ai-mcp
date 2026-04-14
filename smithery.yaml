@@ -1,10 +1,31 @@
 name: commit-message-ai-mcp
-description: "MEOK AI Labs — commit-message-ai-mcp — Generate semantic commit messages."
-vendor: MEOK AI Labs
-homepage: https://meok.ai
-repository: https://github.com/CSOAI-ORG/commit-message-ai-mcp
-license: MIT
-categories: [Developer Tools, Git]
-tags: [git-commit, commit-message, conventional-commits, git-workflow]
-runtime: python
-entrypoint: server.py
+description: "commit-message-ai-mcp \u2014 Generate semantic commit messages."
+version: 1.0.0
+tools:
+- name: generate_commit
+  description: Generate conventional commit message (feat/fix/refactor/docs/test/chore).
+  parameters:
+  - name: changes_description
+    type: string
+    required: true
+  - name: type
+    type: string
+    required: false
+- name: parse_diff
+  description: Parse a git diff and summarize the changes.
+  parameters:
+  - name: diff_text
+    type: string
+    required: true
+- name: suggest_type
+  description: Suggest commit type based on change description.
+  parameters:
+  - name: description
+    type: string
+    required: true
+- name: format_changelog
+  description: Format a list of commits into a changelog entry.
+  parameters:
+  - name: commits
+    type: string
+    required: true

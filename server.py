@@ -1,5 +1,10 @@
 #!/usr/bin/env python3
 """Generate conventional commit messages from diffs and descriptions. — MEOK AI Labs."""
+
+import sys, os
+sys.path.insert(0, os.path.expanduser('~/clawd/meok-labs-engine/shared'))
+from auth_middleware import check_access
+
 import json, os, re, hashlib, math
 from datetime import datetime, timezone
 from typing import Optional
@@ -18,8 +23,12 @@ mcp = FastMCP("commit-message-ai", instructions="MEOK AI Labs — Generate conve
 
 
 @mcp.tool()
-def generate_commit(changes_description: str, type: str = 'auto') -> str:
+def generate_commit(changes_description: str, type: str = 'auto', api_key: str = "") -> str:
     """Generate conventional commit message (feat/fix/refactor/docs/test/chore)."""
+    allowed, msg, tier = check_access(api_key)
+    if not allowed:
+        return {"error": msg, "upgrade_url": "https://meok.ai/pricing"}
+
     if err := _rl(): return err
     # Real implementation
     result = {"tool": "generate_commit", "input_length": len(str(locals())), "timestamp": datetime.now(timezone.utc).isoformat()}
@@ -33,34 +42,46 @@ def generate_commit(changes_description: str, type: str = 'auto') -> str:
         else: type = "chore"
     result["message"] = f"{type}: {changes_description[:72]}"
     result["type"] = type
-    return json.dumps(result, indent=2)
+    return result
 
 @mcp.tool()
-def parse_diff(diff_text: str) -> str:
+def parse_diff(diff_text: str, api_key: str = "") -> str:
     """Parse a git diff and summarize the changes."""
+    allowed, msg, tier = check_access(api_key)
+    if not allowed:
+        return {"error": msg, "upgrade_url": "https://meok.ai/pricing"}
+
     if err := _rl(): return err
     # Real implementation
     result = {"tool": "parse_diff", "input_length": len(str(locals())), "timestamp": datetime.now(timezone.utc).isoformat()}
     result["status"] = "processed"
-    return json.dumps(result, indent=2)
+    return result
 
 @mcp.tool()
-def suggest_type(description: str) -> str:
+def suggest_type(description: str, api_key: str = "") -> str:
     """Suggest commit type based on change description."""
+    allowed, msg, tier = check_access(api_key)
+    if not allowed:
+        return {"error": msg, "upgrade_url": "https://meok.ai/pricing"}
+
     if err := _rl(): return err
     # Real implementation
     result = {"tool": "suggest_type", "input_length": len(str(locals())), "timestamp": datetime.now(timezone.utc).isoformat()}
     result["status"] = "processed"
-    return json.dumps(result, indent=2)
+    return result
 
 @mcp.tool()
-def format_changelog(commits: str) -> str:
+def format_changelog(commits: str, api_key: str = "") -> str:
     """Format a list of commits into a changelog entry."""
+    allowed, msg, tier = check_access(api_key)
+    if not allowed:
+        return {"error": msg, "upgrade_url": "https://meok.ai/pricing"}
+
     if err := _rl(): return err
     # Real implementation
     result = {"tool": "format_changelog", "input_length": len(str(locals())), "timestamp": datetime.now(timezone.utc).isoformat()}
     result["status"] = "processed"
-    return json.dumps(result, indent=2)
+    return result
 
 
 if __name__ == "__main__":
