@@ -1,0 +1,52 @@
+{
+  "name": "commit-message-ai",
+  "description": "MEOK AI Labs \u2014 Generate conventional commit messages from diffs and descriptions.",
+  "version": "1.0.0",
+  "protocol_version": "2025-11-25",
+  "publisher": {
+    "name": "MEOK AI Labs",
+    "url": "https://meok.ai",
+    "email": "nicholas@meok.ai"
+  },
+  "repository": "https://github.com/CSOAI-ORG/commit-message-ai-mcp",
+  "license": "MIT",
+  "transport": [
+    "stdio",
+    "streamable-http"
+  ],
+  "authentication": {
+    "type": "api-key",
+    "free_tier": true,
+    "free_limit": "15 calls/day"
+  },
+  "tools": [
+    {
+      "name": "generate_commit_message",
+      "description": "Generate a conventional commit message from a description. Auto-detects type, scope, and breaking changes."
+    },
+    {
+      "name": "analyze_diff",
+      "description": "Parse a git diff and produce a structured summary with files changed, additions, deletions, and suggested commit type."
+    },
+    {
+      "name": "suggest_type",
+      "description": "Suggest the best conventional commit type for a change description with confidence scoring."
+    },
+    {
+      "name": "validate_conventional",
+      "description": "Validate a commit message against the Conventional Commits specification and report issues."
+    }
+  ],
+  "categories": [
+    "AI & Machine Learning"
+  ],
+  "pricing": {
+    "free": {
+      "calls_per_day": 15
+    },
+    "pro": {
+      "price": "$29/month",
+      "url": "https://meok.ai/pricing"
+    }
+  }
+}
