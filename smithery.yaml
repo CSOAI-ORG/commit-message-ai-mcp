@@ -1,6 +1,6 @@
 name: commit-message-ai-mcp
-description: "MEOK AI Labs \u2014 Generate conventional commit messages from diffs\
-  \ and descriptions."
+description: AI-powered commit message ai MCP server for agents. Supports generate
+  commit, parse diff, suggest type. By MEOK AI Labs.
 version: 1.0.0
 tools:
 - name: generate_commit
