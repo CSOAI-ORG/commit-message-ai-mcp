@@ -1,50 +1,38 @@
-# Commit Message AI MCP Server
+<div align="center">
 
-> By [MEOK AI Labs](https://meok.ai) — Generate conventional commit messages from diffs and descriptions
+[![GitHub stars](https://img.shields.io/github/stars/CSOAI-ORG/commit-message-ai-mcp)](https://github.com/CSOAI-ORG/commit-message-ai-mcp/stargazers)
+
+# ucommitU messageU aiU mcp
+
+****
+
+[![npm version](https://img.shields.io/npm/v/@meok-ai/commit-message-ai-mcp)](https://www.npmjs.com/package/@meok-ai/commit-message-ai-mcp)
+[![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
+[![MEOK AI Labs](https://img.shields.io/badge/MEOK_AI_Labs-255+_servers-purple)](https://meok.ai)
+
+[Installation](#installation) · [Docs](https://csoai.org) · [Report Bug](https://github.com/CSOAI-ORG/commit-message-ai-mcp/issues)
+
+</div>
+
+---
 
 ## Installation
 
 ```bash
 pip install commit-message-ai-mcp
+# or
+npm install -g @meok-ai/commit-message-ai-mcp
 ```
 
-## Usage
+## Quick Start
 
-```bash
-python server.py
-```
+See the project repository for full documentation and examples.
 
-## Tools
+## Enterprise Support
 
-### `generate_commit`
-Generate conventional commit message (feat/fix/refactor/docs/test/chore) with auto-detection.
-
-**Parameters:**
-- `changes_description` (str): Description of changes
-- `type` (str): Commit type or 'auto' for auto-detection
-
-### `parse_diff`
-Parse a git diff and summarize the changes.
-
-**Parameters:**
-- `diff_text` (str): Git diff text
-
-### `suggest_type`
-Suggest commit type based on change description.
-
-**Parameters:**
-- `description` (str): Change description
-
-### `format_changelog`
-Format a list of commits into a changelog entry.
-
-**Parameters:**
-- `commits` (str): Commit messages
-
-## Authentication
-
-Free tier: 30 calls/day. Upgrade at [meok.ai/pricing](https://meok.ai/pricing) for unlimited access.
+- 📧 nicholas@csoai.org
+- 🌐 [CSOAI.org](https://csoai.org)
 
 ## License
 
-MIT — MEOK AI Labs
+MIT © [CSOAI](https://csoai.org)
