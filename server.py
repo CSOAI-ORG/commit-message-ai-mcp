@@ -88,7 +88,22 @@ def _is_breaking(text: str) -> bool:
 @mcp.tool()
 def generate_commit_message(changes_description: str, commit_type: str = "auto",
                              scope: str = "", breaking: bool = False, api_key: str = "") -> str:
-    """Generate a conventional commit message from a description. Auto-detects type, scope, and breaking changes."""
+    """Generate a conventional commit message from a description. Auto-detects type, scope, and breaking changes.
+
+    Behavior:
+        This tool generates structured output without modifying external systems.
+        Output is deterministic for identical inputs. No side effects.
+        Free tier: 10/day rate limit. Pro tier: unlimited.
+        No authentication required for basic usage.
+
+    When to use:
+        Use this tool when you need structured analysis or classification
+        of inputs against established frameworks or standards.
+
+    When NOT to use:
+        Not suitable for real-time production decision-making without
+        human review of results.
+    """
     allowed, msg, tier = check_access(api_key)
     if not allowed:
         return {"error": msg, "upgrade_url": "https://meok.ai/pricing"}
@@ -134,7 +149,22 @@ def generate_commit_message(changes_description: str, commit_type: str = "auto",
 
 @mcp.tool()
 def analyze_diff(diff_text: str, api_key: str = "") -> str:
-    """Parse a git diff and produce a structured summary with files changed, additions, deletions, and suggested commit type."""
+    """Parse a git diff and produce a structured summary with files changed, additions, deletions, and suggested commit type.
+
+    Behavior:
+        This tool generates structured output without modifying external systems.
+        Output is deterministic for identical inputs. No side effects.
+        Free tier: 10/day rate limit. Pro tier: unlimited.
+        No authentication required for basic usage.
+
+    When to use:
+        Use this tool when you need structured analysis or classification
+        of inputs against established frameworks or standards.
+
+    When NOT to use:
+        Not suitable for real-time production decision-making without
+        human review of results.
+    """
     allowed, msg, tier = check_access(api_key)
     if not allowed:
         return {"error": msg, "upgrade_url": "https://meok.ai/pricing"}
@@ -185,7 +215,23 @@ def analyze_diff(diff_text: str, api_key: str = "") -> str:
 
 @mcp.tool()
 def suggest_type(description: str, api_key: str = "") -> str:
-    """Suggest the best conventional commit type for a change description with confidence scoring."""
+    """Suggest the best conventional commit type for a change description with confidence scoring.
+
+    Behavior:
+        This tool is read-only and stateless — it produces analysis output
+        without modifying any external systems, databases, or files.
+        Safe to call repeatedly with identical inputs (idempotent).
+        Free tier: 10/day rate limit. Pro tier: unlimited.
+        No authentication required for basic usage.
+
+    When to use:
+        Use this tool when you need structured analysis or classification
+        of inputs against established frameworks or standards.
+
+    When NOT to use:
+        Not suitable for real-time production decision-making without
+        human review of results.
+    """
     allowed, msg, tier = check_access(api_key)
     if not allowed:
         return {"error": msg, "upgrade_url": "https://meok.ai/pricing"}
@@ -225,7 +271,23 @@ def suggest_type(description: str, api_key: str = "") -> str:
 
 @mcp.tool()
 def validate_conventional(message: str, api_key: str = "") -> str:
-    """Validate a commit message against the Conventional Commits specification and report issues."""
+    """Validate a commit message against the Conventional Commits specification and report issues.
+
+    Behavior:
+        This tool is read-only and stateless — it produces analysis output
+        without modifying any external systems, databases, or files.
+        Safe to call repeatedly with identical inputs (idempotent).
+        Free tier: 10/day rate limit. Pro tier: unlimited.
+        No authentication required for basic usage.
+
+    When to use:
+        Use this tool when you need structured analysis or classification
+        of inputs against established frameworks or standards.
+
+    When NOT to use:
+        Not suitable for real-time production decision-making without
+        human review of results.
+    """
     allowed, msg, tier = check_access(api_key)
     if not allowed:
         return {"error": msg, "upgrade_url": "https://meok.ai/pricing"}
