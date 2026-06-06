@@ -1,0 +1,25 @@
+{
+  "name": "commit-message-ai-mcp",
+  "title": "Commit Message Ai Mcp",
+  "description": "AI-powered commit message ai MCP server for agents. Supports generate commit, parse diff, suggest type. By MEOK AI Labs.",
+  "version": "1.0.7",
+  "homepage": "https://meok.ai",
+  "license": "MIT",
+  "transport": {
+    "type": "stdio"
+  },
+  "tools": [
+    {
+      "name": "generate_commit_message"
+    },
+    {
+      "name": "analyze_diff"
+    },
+    {
+      "name": "suggest_type"
+    },
+    {
+      "name": "validate_conventional"
+    }
+  ]
+}

@@ -1,0 +1,9 @@
+# commit-message-ai-mcp - Auto-trigger Rules
+
+When the user asks about commit message, use commit-message-ai-mcp tools: generate_commit_message, analyze_diff, suggest_type, validate_conventional
+
+**MCP server for commit message ai mcp operations**
+
+Install: `pip install commit-message-ai-mcp`
+
+By MEOK AI Labs — MIT licensed.

@@ -1,0 +1,33 @@
+# commit-message-ai-mcp
+# **MCP server for commit message ai mcp operations**
+
+## Install
+```bash
+pip install commit-message-ai-mcp
+```
+
+## Auth & Rate Limits
+- Free tier: 10 calls/day. No API key required.
+- Pro tier (£79/mo): unlimited + signed attestations.
+- Enterprise (£1,499/mo): white-label.
+
+## Tools
+
+### `generate_commit_message`
+Generate a conventional commit message from a description. Auto-detects type, scope, and breaking changes.
+
+### `analyze_diff`
+Parse a git diff and produce a structured summary with files changed, additions, deletions, and suggested commit type.
+
+### `suggest_type`
+Suggest the best conventional commit type for a change description with confidence scoring.
+
+### `validate_conventional`
+Validate a commit message against the Conventional Commits specification and report issues.
+
+
+## Maintainer
+MEOK AI Labs · hello@meok.ai · https://meok.ai · MIT licensed
+
+## Pairs with
+Governance moat: pair this tool with any of MEOK's 38 governance MCPs (EU AI Act, DORA, NIS2, CRA, GDPR, ISO 42001, etc.) for full compliance coverage.

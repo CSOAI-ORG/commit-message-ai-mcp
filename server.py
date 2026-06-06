@@ -1,5 +1,6 @@
 #!/usr/bin/env python3
-"""Generate conventional commit messages from diffs and descriptions. — MEOK AI Labs."""
+"""
+Generate conventional commit messages from diffs and descriptions. — MEOK AI Labs."""
 
 import sys, os
 from auth_middleware import check_access
