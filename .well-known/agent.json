@@ -1,0 +1,59 @@
+{
+  "name": "commit-message-ai-mcp",
+  "description": "Commit Message Ai MCP Server by MEOK AI Labs",
+  "url": "https://proofof.ai/scorecard/commit-message-ai-mcp.html",
+  "version": "1.0.7",
+  "protocolVersion": "0.2.0",
+  "provider": {
+    "organization": "MEOK AI Labs",
+    "url": "https://meok.ai"
+  },
+  "capabilities": {
+    "streaming": false,
+    "pushNotifications": false
+  },
+  "defaultInputModes": [
+    "text"
+  ],
+  "defaultOutputModes": [
+    "text"
+  ],
+  "skills": [
+    {
+      "id": "generate_commit_message",
+      "name": "Generate Commit Message",
+      "description": "generate_commit_message via commit-message-ai-mcp",
+      "tags": [
+        "mcp",
+        "compliance"
+      ]
+    },
+    {
+      "id": "analyze_diff",
+      "name": "Analyze Diff",
+      "description": "analyze_diff via commit-message-ai-mcp",
+      "tags": [
+        "mcp",
+        "compliance"
+      ]
+    },
+    {
+      "id": "suggest_type",
+      "name": "Suggest Type",
+      "description": "suggest_type via commit-message-ai-mcp",
+      "tags": [
+        "mcp",
+        "compliance"
+      ]
+    },
+    {
+      "id": "validate_conventional",
+      "name": "Validate Conventional",
+      "description": "validate_conventional via commit-message-ai-mcp",
+      "tags": [
+        "mcp",
+        "compliance"
+      ]
+    }
+  ]
+}

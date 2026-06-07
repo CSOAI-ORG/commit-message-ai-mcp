@@ -1,0 +1,22 @@
+{
+  "acpVersion": "0.1",
+  "agent": {
+    "name": "commit-message-ai-mcp",
+    "description": "Commit Message Ai MCP Server by MEOK AI Labs",
+    "version": "1.0.7",
+    "provider": "MEOK AI Labs",
+    "interfaces": [
+      {
+        "type": "mcp",
+        "transport": "stdio",
+        "package": "commit-message-ai-mcp"
+      }
+    ],
+    "capabilities": [
+      "generate_commit_message",
+      "analyze_diff",
+      "suggest_type",
+      "validate_conventional"
+    ]
+  }
+}
