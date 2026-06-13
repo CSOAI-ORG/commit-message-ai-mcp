@@ -4,9 +4,8 @@
   "version": "1.0.10",
   "description": "Commit Message Ai MCP Server by MEOK AI Labs",
   "repository": {
-    "type": "git",
     "url": "https://github.com/CSOAI-ORG/commit-message-ai-mcp",
-    "source": "https://github.com/CSOAI-ORG/commit-message-ai-mcp"
+    "source": "github"
   },
   "packages": [
     {
